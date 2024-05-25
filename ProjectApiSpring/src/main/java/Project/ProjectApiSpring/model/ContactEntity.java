@@ -3,13 +3,15 @@ package Project.ProjectApiSpring.model;
 import jakarta.persistence.*;
 
 @Entity
-public class Contact {
+public class ContactEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //autoincrementador (tupo identity) para o id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //autoincrementador (tipo identity) para o id
     private Long id;
+    @Column(nullable = false)
     private String name;
-
+    @Column(nullable = false)
     private String telephone;
+    @Column(nullable = false)
     private String email;
 
     private String urlAvatar;
